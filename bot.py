@@ -31,13 +31,10 @@ arl = config.get('DEEZER', 'ARL')
 
 clients = []
 
-clients.append(streamrip.clients.QobuzClient())
-clients[0].login(email_or_userid=email_or_userid, password_or_token=password_or_token, use_auth_token=True)
-
 clients.append(streamrip.clients.DeezerClient())
 clients[1].login(arl=arl)
 
-clients_names = ['Qobuz', 'Deezer']
+clients_names = ['Deezer']
 
 def load_album(album_id, client_id):
     client = clients[client_id]
